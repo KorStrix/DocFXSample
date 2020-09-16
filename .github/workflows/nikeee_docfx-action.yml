@@ -23,7 +23,8 @@ jobs:
     - name: Commit Build
       uses: EndBug/add-and-commit@v4.4.0
       with:
-        add: "--all :/"
+        add: '--all :/'
+        cwd: 'UnitySample/Documentation/_site'
 
   deploy:
     needs: build
