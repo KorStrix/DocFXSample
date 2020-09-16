@@ -19,11 +19,22 @@ jobs:
       with:
         args: UnitySample/Documentation/docfx.json
 
-  #deploy:
-    #needs: build
-    #runs-on: ubuntu-latest
+
+    - name: Build Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
+      # with:
+        # commit_message: Apply php-cs-fixer changes
+        # push_options: --force
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
     
-    #steps:
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+
     - name: Copycat
       uses: andstor/copycat-action@v3
       with:
