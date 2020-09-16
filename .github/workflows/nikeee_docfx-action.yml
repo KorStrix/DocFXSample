@@ -18,23 +18,18 @@ jobs:
       uses: nikeee/docfx-action@v1.0.0
       with:
         args: UnitySample/Documentation/docfx.json
-        
-        
-    # Upload the generated documentation
-    - name: Upload site artifact
-      uses: actions/upload-artifact@v1
-      with:
-        name: _site
-        path: UnitySample/Documentation/_site # Must equals the 'build.dest' value on your docfx.json
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          external_repository: Korstrix/korstrix.github.io
+          publish_branch: master  # default: gh-pages
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        personal_token: ${{ secrets.ACCESS_TOKEN }}
-        # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        external_repository: Korstrix/korstrix.github.io
-        publish_branch: master  # default: gh-pages
-
-        publish_dir: ./UnitySample/Documentation/_site
-        destination_dir: DocFXSample
+          publish_dir: ./UnitySample/Documentation/_site
+          destination_dir: DocFXSample/
