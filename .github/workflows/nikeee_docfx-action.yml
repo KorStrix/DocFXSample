@@ -19,10 +19,16 @@ jobs:
       with:
         args: UnitySample/Documentation/docfx.json
         
+    # Upload the generated documentation
+    - name: Upload site artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: _site
+        path: UnitySample/Documentation/_site # Must equals the 'build.dest' value on your docfx.json
 
     # Publish generated site using GitHub Pages
     - name: Publish Documentation on GitHub Pages
       uses: maxheld83/ghpages@master
       env:
-        BUILD_DIR: _site # docfx's default output directory is _site
+        BUILD_DIR: UnitySample/Documentation/_site # docfx's default output directory is _site
         GH_PAT: ${{ secrets.ACCESS_TOKEN }} # See https://github.com/maxheld83/ghpages
