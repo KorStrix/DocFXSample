@@ -23,7 +23,7 @@ jobs:
     - name: Commit Build
       uses: EndBug/add-and-commit@v4.4.0
       with:
-        add: "*"
+        add: "--all"
 
   deploy:
     needs: build
