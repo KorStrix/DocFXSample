@@ -35,4 +35,4 @@ jobs:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: Korstrix/korstrix.github.io
         # publish_branch: your-branch  # default: gh-pages
-        publish_dir: ./public
+        publish_dir: ./UnitySample/Documentation/_site
