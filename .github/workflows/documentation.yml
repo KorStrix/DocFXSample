@@ -1,9 +1,9 @@
 name: Example documentation
 
 on:
-  push:
-    branches:
-      - master
+  # push:
+  # branches:
+    # - master
 
 jobs:
   # Build the documentation
