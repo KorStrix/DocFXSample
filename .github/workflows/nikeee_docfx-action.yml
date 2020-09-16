@@ -32,7 +32,9 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.ACCESS_TOKEN }}
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: Korstrix/korstrix.github.io
         publish_branch: master  # default: gh-pages
+
         publish_dir: ./UnitySample/Documentation/_site
+        destination_dir: DocFXSample
