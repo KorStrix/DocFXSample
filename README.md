@@ -1,3 +1,5 @@
+![Build](https://github.com/KorStrix/DocFX_ForUnityProject/workflows/Build%20and%20Deploy%20DocFX%20For%20UnityProject/badge.svg?branch=master)
+
 # DocFX_ForUnityProject
 
 이 프로젝트는 Unity Project를 GitHub Action(CI)를 통해 자동 생성하는 샘플 프로젝트입니다.
