@@ -53,3 +53,4 @@ jobs: # 잡들 선언
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # You need some setup, see https://github.com/JamesIves/github-pages-deploy-action
         BRANCH: gh-pages
         FOLDER: _site
+        REPOSITORY_NAME: Korstrix/korstrix.github.io
