@@ -1,4 +1,4 @@
-![Build](https://github.com/KorStrix/DocFX_ForUnityProject/workflows/Build%20and%20Deploy%20DocFX%20For%20UnityProject/badge.svg?branch=master)
+![Build and Deploy](https://github.com/KorStrix/DocFX_ForUnityProject/workflows/Build%20and%20Deploy/badge.svg?branch=master)
 
 # DocFX_ForUnityProject
 
