@@ -48,7 +48,7 @@ jobs:
         src_branch: master
         src_path: /UnitySample/Documentation/_site/.
         dst_branch: master
-        dst_path: /DocFXSample/
+        dst_path: /docfxsample/
         clean: true
         username: KorStrixCI
         # exclude: .*
