@@ -69,7 +69,9 @@
 		},
 		"sitemap": {
 			"baseUrl": "https://korstrix.github.io/docfxsample"
-		}
-		"xref": [ "https://korstrix.github.io/docfxsample/Unity/2018.4/xrefmap.yml" ],
+		},
+		"xref": [ "https://korstrix.github.io/docfxsample/Unity/xrefmap.yml" ],
+        "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+        "dest": "../_site"
 	}
 }
