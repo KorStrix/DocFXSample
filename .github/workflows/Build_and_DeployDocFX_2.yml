@@ -30,7 +30,7 @@ jobs: # 잡들 선언
       uses: actions/upload-artifact@v1
       with:
         name: _site
-        path: UnitySample/Documentation/_site # Must equals the 'build.dest' value on your docfx.json
+        path: UnitySample/_site # Must equals the 'build.dest' value on your docfx.json
 
 
   deploy: # deploy Job을 선언합니다.
