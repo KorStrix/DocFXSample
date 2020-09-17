@@ -20,17 +20,18 @@
 			"_appTitle": "Example Title",
 			"_appFooter": "Example Footer",
 			
-			"_enableSearch": true,
 			"_gitContribute": {
-				"repo": "https://github.com/KorStrix/DocFXSample.git",
-				"branch": "master",
-				"path": ""
+				"branch": "master"
 			},
-			"_gitUrlPattern": "github",
+			
 			"newFileRepository": {
 				"branch": "master"
-			}
+			},
+			
+			"_gitUrlPattern": "github",
+			"_enableSearch": true
 		},
+		
 		"content": [
 			{
                 "files": [ "toc.yml", "index.md" ]
