@@ -21,6 +21,10 @@ https://github.com/NormandErwan/DocFxForUnity
 
 웹 브라우저에서 `localhost:8080`로 들어가볼 것
 
+## 아직 못한 것
+
+Unity Cs Reference - Xref 빌드 및 링크 연결
+
 ### 도움이 된 링크
 https://stewmcc.com/post/docfx-unity-gitlab/
 
