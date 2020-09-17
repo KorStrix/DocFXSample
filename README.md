@@ -20,3 +20,6 @@ https://github.com/NormandErwan/DocFxForUnity
 를 실행한 뒤,
 
 웹 브라우저에서 `localhost:8080`로 들어가볼 것
+
+### 도움이 된 링크
+https://stewmcc.com/post/docfx-unity-gitlab/
