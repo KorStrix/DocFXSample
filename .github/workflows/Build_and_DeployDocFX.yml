@@ -1,5 +1,5 @@
 # 이 워크플로는 DocFX를 빌드하고 다른 Github Repo(이 경우엔 제 Github Page 블로그)에 커밋합니다.
-name: Build and Deploy DocFX 2
+name: Build and Deploy DocFX For UnityProject
 
 # -master 브랜치에 push가 발생했을 경우
 on:
