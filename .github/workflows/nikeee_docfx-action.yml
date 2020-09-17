@@ -44,7 +44,7 @@ jobs:
       with:
         personal_token: ${{ secrets.ACCESS_TOKEN }}
         dst_owner: KorStrix
-        dst_repo_name: Unity_UnitTestTester
+        dst_repo_name: korstrix.github.io
         src_branch: master
         src_path: /UnitySample/Documentation/_site/.
         dst_branch: master
