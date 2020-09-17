@@ -28,9 +28,9 @@ jobs: # 잡들 선언
     # 링크 : https://github.com/EndBug/add-and-commit
     - name: Commit Build # DocFx의 결과물을 이 Repo에 커밋합니다.
       uses: EndBug/add-and-commit@v4.4.0
-#      env:
+      env:
         # This is necessary in order to push a commit to the repo
-#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged:  
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged:  
 
       with:
         cwd: './UnitySample/Documentation/_site/'
