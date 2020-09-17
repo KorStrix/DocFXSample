@@ -2,10 +2,10 @@
 name: Build and Deploy DocFX
 
 # -master 브랜치에 push가 발생했을 경우
-on:
-  push:
-    branches:
-      - master
+#on:
+#  push:
+#    branches:
+#      - master
 
 
 jobs: # 잡들 선언
