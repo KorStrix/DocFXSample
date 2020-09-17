@@ -51,6 +51,7 @@ jobs: # 잡들 선언
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # You need some setup, see https://github.com/JamesIves/github-pages-deploy-action
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: _site
         REPOSITORY_NAME: Korstrix/korstrix.github.io
+        TARGET_FOLDER: docfxsample/
