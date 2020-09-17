@@ -1,0 +1,55 @@
+# 이 워크플로는 DocFX를 빌드하고 다른 Github Repo(이 경우엔 제 Github Page 블로그)에 커밋합니다.
+name: Build and Deploy DocFX 2
+
+# -master 브랜치에 push가 발생했을 경우
+on:
+  push:
+    branches:
+      - master
+
+
+jobs: # 잡들 선언
+
+  build: # build Job을 선언합니다.
+    runs-on: ubuntu-latest #실행 환경은 우분투의 마지막 버전으로 실행
+    
+    steps: # 이 잡은 이 행동(action)들을 합니다.
+    - name: Checkout # 일단 이 Repo를 Checkout을 합니다.
+      uses: actions/checkout@v1
+    
+    
+    # 링크 : https://github.com/nikeee/docfx-action
+    - name: Build Documentation # 그다음 바로 DocFx를 빌드합니다.
+      uses: nikeee/docfx-action@v1.0.0  
+      with:
+        args: UnitySample/Documentation/docfx.json # 이 Repo의 해당 docFx가 있어서 인자로 넘깁니다.
+
+
+    # Upload the generated documentation
+    - name: Upload site artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: _site
+        path: UnitySample/Documentation/_site # Must equals the 'build.dest' value on your docfx.json
+
+
+  deploy: # deploy Job을 선언합니다.
+    needs: build # build가 되면 실행됩니다.
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout # 새로운 job이기 때문에 다시 checkout을 해야 합니다.
+      uses: actions/checkout@v1
+
+    # Download the generated documentation
+    - name: Download site artifact
+      uses: actions/download-artifact@v1
+      with:
+        name: _site
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # You need some setup, see https://github.com/JamesIves/github-pages-deploy-action
+        BRANCH: gh-pages
+        FOLDER: _site
