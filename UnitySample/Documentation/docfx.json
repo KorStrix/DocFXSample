@@ -33,6 +33,9 @@
 		},
 		"content": [
 			{
+                "files": [ "toc.yml", "index.md" ]
+            },
+			{
 				"files": [
 					"api/**.yml",
 					"api/index.md"

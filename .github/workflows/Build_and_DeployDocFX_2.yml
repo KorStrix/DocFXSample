@@ -18,6 +18,13 @@ jobs: # 잡들 선언
       uses: actions/checkout@v1
     
     
+    
+    # Readme.md 파일을 document index로 옮깁니다. (index.md는 자동생성이 안됨)
+    - name: Replace Readme
+      run: |
+        cp README.md UnitySample/Documentation/index.md 
+       
+       
        
     # 링크 : https://github.com/nikeee/docfx-action
     - name: Build Documentation # 그다음 바로 DocFx를 빌드합니다.
@@ -26,11 +33,6 @@ jobs: # 잡들 선언
         args: UnitySample/Documentation/docfx.json # 이 Repo의 해당 docFx가 있어서 인자로 넘깁니다.
    
    
-    # Readme.md 파일을 document index로 옮깁니다. (index.md는 자동생성이 안됨)
-    - name: Replace Readme
-      run: |
-        cp README.md UnitySample/_site/index.md 
-       
    
     # Upload the generated documentation
     - name: Upload site artifact
