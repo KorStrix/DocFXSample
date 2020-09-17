@@ -24,7 +24,7 @@ jobs:
       uses: EndBug/add-and-commit@v4.4.0
       with:
         add: '.'
-.       cwd: './UnitySample/Documentation/.'
+        cwd: './UnitySample/Documentation/.'
 
   deploy:
     needs: build
