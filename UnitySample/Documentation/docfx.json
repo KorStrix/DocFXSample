@@ -9,8 +9,10 @@
 					]
 				}
 			],
+			"globalNamespaceId": "Global",
 			"dest": "api",
 			"filter": "filterConfig.yml",
+			
 			"disableGitFeatures": false,
 			"disableDefaultFilter": false	
 		}
@@ -31,6 +33,10 @@
 			"_gitUrlPattern": "github",
 			"_enableSearch": true
 		},
+		
+		"xrefservice": [
+			"https://xref.docs.microsoft.com/query?uid={uid}"
+		],
 		
 		"content": [
 			{

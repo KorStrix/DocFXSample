@@ -1,9 +1,12 @@
 apiRules:
 - include: # The namespaces to generate
-    uidRegex: .* # Every other namespaces are ignored
-    type: Namespace
-- include: # The namespaces to generate
     uidRegex: DocFXTest
+    type: Namespace
+- exclude:
+    uidRegex: ^System
+    type: Namespace
+- exclude:
+    uidRegex: ^UnityEngine
     type: Namespace
 #- include:
 #    uidRegex: ^Your\.Namespace2
