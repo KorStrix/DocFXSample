@@ -68,7 +68,8 @@
 			"_enableSearch": true
 		},
 		"sitemap": {
-			"baseUrl": "https://normanderwan.github.io/DocFxForUnity"
+			"baseUrl": "https://korstrix.github.io/docfxsample"
 		}
+		"xref": [ "https://korstrix.github.io/docfxsample/Unity/2018.4/xrefmap.yml" ],
 	}
 }
