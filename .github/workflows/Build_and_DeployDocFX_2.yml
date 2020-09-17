@@ -24,7 +24,11 @@ jobs: # 잡들 선언
       with:
         args: UnitySample/Documentation/docfx.json # 이 Repo의 해당 docFx가 있어서 인자로 넘깁니다.
 
-
+    # Readme.md 파일을 document index로 옮깁니다. (index.md는 자동생성이 안됨)
+    - name: Replace Readme
+      run: |
+        cp README.md UnitySample/Documentation/index.md 
+          
     # Upload the generated documentation
     - name: Upload site artifact
       uses: actions/upload-artifact@v1
