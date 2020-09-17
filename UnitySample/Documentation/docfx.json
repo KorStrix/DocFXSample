@@ -15,14 +15,19 @@
 	],
 	"build": {
 		"globalMetadata": {
-			"_appTitle": "Example Unity documentation",
-			"_appFooter": "Example Unity documentation",
+			"_appTitle": "Example Title",
+			"_appFooter": "Example Footer",
+			
 			"_enableSearch": true,
-			    "_gitContribute": {
+			"_gitContribute": {
 				"repo": "https://github.com/KorStrix/DocFXSample.git",
 				"branch": "master",
 				"path": ""
-				}
+			},
+			"_gitUrlPattern": "github",
+			"newFileRepository": {
+				"branch": "master"
+			}
 		},
 		"content": [
 			{
@@ -45,7 +50,7 @@
 		"overwrite": [
             {
                 "src": "..",
-                "files": [ "Assets/Scripts/**/*.md" ]
+                "files": [ "Assets/**/*.md" ]
             }
 		],
 		"resource": [
