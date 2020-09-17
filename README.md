@@ -1,4 +1,4 @@
-# DocFXSample
+# DocFX_ForUnityProject
 
 이 프로젝트는 Unity Project를 GitHub Action(CI)를 통해 자동 생성하는 샘플 프로젝트입니다.
 
