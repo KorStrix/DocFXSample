@@ -17,7 +17,12 @@
 		"globalMetadata": {
 			"_appTitle": "Example Unity documentation",
 			"_appFooter": "Example Unity documentation",
-			"_enableSearch": true
+			"_enableSearch": true,
+			    "_gitContribute": {
+				"repo": "https://github.com/KorStrix/DocFXSample.git",
+				"branch": "master",
+				"path": ""
+				}
 		},
 		"content": [
 			{
