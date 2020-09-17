@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 namespace DocFXTest
@@ -23,13 +21,18 @@ namespace DocFXTest
         /// </summary>
         public void Public_Function()
         {
-
+            Debug.Log("테스트 로그");
         }
 
         /// <summary>
         /// 이 함수는 virtual 함수입니다.
         /// </summary>
         public virtual void Virtual_Function()
+        {
+
+        }
+
+        protected virtual void Virtual_Protected()
         {
 
         }
