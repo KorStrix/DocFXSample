@@ -16,8 +16,6 @@ jobs: # 잡들 선언
     steps: # 이 잡은 이 행동(action)들을 합니다.
     - name: Checkout # 일단 이 Repo를 Checkout을 합니다.
       uses: actions/checkout@v2
-      with:
-        ref: AddDisqus
     
     
     # Readme.md 파일을 document index로 옮깁니다. (index.md는 자동생성이 안됨)
@@ -49,8 +47,6 @@ jobs: # 잡들 선언
     steps:
     - name: Checkout # 새로운 job이기 때문에 다시 checkout을 해야 합니다.
       uses: actions/checkout@v1
-      with:
-        ref: AddDisqus
 
 
     # Download the generated documentation

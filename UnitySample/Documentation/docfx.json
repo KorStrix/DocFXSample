@@ -34,6 +34,7 @@
 			"_enableSearch": true
 		},
 		
+		"xref": [ "https://normanderwan.github.io/DocFxForUnity/Unity/xrefmap.yml" ],
 		"xrefservice": [
 			"https://xref.docs.microsoft.com/query?uid={uid}"
 		],
