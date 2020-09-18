@@ -4,9 +4,8 @@ name: Build and Deploy
 # -master 브랜치에 push가 발생했을 경우
 on:
   push:
-    branches:
+    # branches:
       # - master
-        - AddDisqus
 
 
 jobs: # 잡들 선언
