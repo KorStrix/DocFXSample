@@ -5,7 +5,8 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      # - master
+        - AddDisqus
 
 
 jobs: # 잡들 선언
