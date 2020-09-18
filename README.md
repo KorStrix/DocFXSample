@@ -30,7 +30,7 @@ Unity Cs Reference - Xref 빌드 및 링크 연결
 
 ## 덧글기능(DISQUS)
 
-AddDisqus 브랜치를 통해 받으신 후
+AddDisqus 브랜치[링크](https://github.com/KorStrix/DocFX_ForUnityProject/tree/AddDisqus)를 통해 받으신 후
 
 https://github.com/KorStrix/DocFX_ForUnityProject/blob/26907465c3022c191bedff3daa954b2cb0827794/UnitySample/Documentation/templates/unity/layout/_master.tmpl#L45
 
