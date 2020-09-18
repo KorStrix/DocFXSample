@@ -51,7 +51,7 @@ namespace DocFxForUnity
         /// <summary>
         /// The URL of the Unity repository.
         /// </summary>
-        private const string UnityRepoUrl = "https://github.com/Unity-Technologies/UnityCsReference.git";
+        private const string UnityRepoUrl = "https://github.com/KorStrix/UnityCsReference.git";
 
         /// <summary>
         /// The xref map filename.
@@ -82,6 +82,7 @@ namespace DocFxForUnity
                     string apiUrl = GetUnityApiUrl(version.name);
 
                     Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}'");
+                    bool bIsError = false;
 
                     try
                     {
@@ -108,9 +109,16 @@ namespace DocFxForUnity
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}' - Fail, Exception : {e}");
+                        Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}' - Fail\n" +
+                                          $"Exception : {e}");
+
+                        bIsError = true;
                     }
 
+                    if (bIsError == false)
+                    {
+                        Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}' - Done\n");
+                    }
 
                     Console.WriteLine("\n");
                 }
