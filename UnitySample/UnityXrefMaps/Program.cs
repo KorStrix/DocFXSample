@@ -82,26 +82,35 @@ namespace DocFxForUnity
                     string apiUrl = GetUnityApiUrl(version.name);
 
                     Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}'");
-                    GenerateXrefMap(unityRepo, version.release);
-                    Utils.CopyFile(filePath, copyPath);
 
-                    Console.WriteLine($"Fixing hrefs in '{copyPath}'");
-                    var xrefMap = XrefMap.Load(copyPath);
-                    xrefMap.FixHrefs(apiUrl);
-                    xrefMap.Save(copyPath);
-
-                    // Set the last version's xref map as the default one
-                    if (version == latestVersion)
+                    try
                     {
-                        string rootPath = Path.Combine(XrefMapsPath, XrefMapFileName); // ./xrefmap.yml
+                        GenerateXrefMap(unityRepo, version.release);
+                        Utils.CopyFile(filePath, copyPath);
 
-                        Console.WriteLine($"Copy '{copyPath}' to '{rootPath}'");
-                        Utils.CopyFile(filePath, rootPath);
+                        Console.WriteLine($"Fixing hrefs in '{copyPath}'");
+                        var xrefMap = XrefMap.Load(copyPath);
+                        xrefMap.FixHrefs(apiUrl);
+                        xrefMap.Save(copyPath);
 
-                        xrefMap = XrefMap.Load(rootPath);
-                        xrefMap.FixHrefs(UnityApiUrl);
-                        xrefMap.Save(rootPath);
+                        // Set the last version's xref map as the default one
+                        if (version == latestVersion)
+                        {
+                            string rootPath = Path.Combine(XrefMapsPath, XrefMapFileName); // ./xrefmap.yml
+
+                            Console.WriteLine($"Copy '{copyPath}' to '{rootPath}'");
+                            Utils.CopyFile(filePath, rootPath);
+
+                            xrefMap = XrefMap.Load(rootPath);
+                            xrefMap.FixHrefs(UnityApiUrl);
+                            xrefMap.Save(rootPath);
+                        }
                     }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}' - Fail, Exception : {e}");
+                    }
+
 
                     Console.WriteLine("\n");
                 }
