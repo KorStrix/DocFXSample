@@ -151,7 +151,7 @@ namespace DocFxForUnity
             // Hard reset the repository
             Console.WriteLine($"Hard reset '{repository.Info.WorkingDirectory}' to '{commit}'");
             repository.Reset(ResetMode.Hard, commit);
-            repository.RemoveUntrackedFiles();
+            // repository.RemoveUntrackedFiles(); 여기서 자꾸 에러남;
 
             // Clear DocFx's temp files and previous generated site
             var pathsToClear = new string[] { DocFxMetadataPath, generatedDocsPath };
