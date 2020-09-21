@@ -24,6 +24,7 @@
 			
 			"_gitContribute": {
 				"branch": "master"
+				"apiSpecFolder": "UnitySample/Documentation"
 			},
 			
 			"newFileRepository": {
