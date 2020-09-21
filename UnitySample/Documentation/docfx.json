@@ -23,7 +23,7 @@
 			"_appFooter": "Example Footer",
 			
 			"_gitContribute": {
-				"branch": "master"
+				"branch": "master",
 				"apiSpecFolder": "UnitySample/Documentation"
 			},
 			
