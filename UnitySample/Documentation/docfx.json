@@ -13,8 +13,7 @@
 			"dest": "api",
 			"filter": "filterConfig.yml",
 			
-			"disableGitFeatures": false,
-			"disableDefaultFilter": false	
+			"disableGitFeatures": false
 		}
 	],
 	"build": {
