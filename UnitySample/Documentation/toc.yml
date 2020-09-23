@@ -1,6 +1,6 @@
 - name: Manual
-  href: Manual/
-  homepage: Manual/intro.md
+  href: manual/
+  homepage: manual/intro.md
 - name: Api Documentation
   href: api/
   homepage: api/index.md
