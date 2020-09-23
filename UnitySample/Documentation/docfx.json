@@ -23,8 +23,9 @@
 			"_appFooter": "Example Footer",
 			
 			"_gitContribute": {
+				"repo": "https://github.com/KorStrix/DocFX_ForUnityProject.git",
 				"branch": "master",
-				"apiSpecFolder": "UnitySample/Documentation"
+				"apiSpecFolder": "UnitySample/Documentation/api"
 			},
 			
 			"newFileRepository": {
@@ -40,6 +41,11 @@
 			"https://xref.docs.microsoft.com/query?uid={uid}"
 		],
 		
+		"sitemap": {
+			"baseUrl": "https://korstrix.github.io/docfxsample"
+		},
+		"overwrite": "UnitySample/Documentaiton/api/*.md",
+		
 		"content": [
 			{
                 "files": [ "toc.yml", "index.md" ]
@@ -52,16 +58,16 @@
 			},
 			{
                 "src": "api",
-                "files": [ "*.yml", "*.md" ],
+                "files": [ "**.yml", "**.md" ],
                 "dest": "api"
             },
             {
                 "src": "manual",
-                "files": [ "toc.yml", "*.md" ],
+                "files": [ "toc.yml", "**.md" ],
                 "dest": "manual"
             }
 		],
-		"overwrite": "UnitySample/Documentaiton/api/*.md",
+		
 		"resource": [
 			{
 				"files": [
@@ -69,6 +75,8 @@
 				]
 			}
 		],
+		
+		
 		"dest": "_site",
 		"globalMetadataFiles": [],
 		"fileMetadataFiles": [],
@@ -82,9 +90,5 @@
 		"keepFileLink": false,
 		"cleanupCacheHistory": false,
 		"disableGitFeatures": false,
-		"sitemap": {
-			"baseUrl": "https://korstrix.github.io/docfxsample"
-		},
-        "dest": "../_site"
 	}
 }
