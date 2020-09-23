@@ -51,7 +51,7 @@
 			},
 			{
                 "src": "api",
-                "files": [ "*.yml" ],
+                "files": [ "*.yml", "*.md" ],
                 "dest": "api"
             },
             {
@@ -60,12 +60,7 @@
                 "dest": "manual"
             }
 		],
-		"overwrite": [
-            {
-                "src": "..",
-                "files": [ "Assets/**/*.md" ]
-            }
-		],
+		"overwrite": "UnitySample/Documentaiton/api/*.md",
 		"resource": [
 			{
 				"files": [
