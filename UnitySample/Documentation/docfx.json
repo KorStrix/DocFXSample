@@ -24,7 +24,7 @@
 			"_gitContribute": {
 				"repo": "https://github.com/KorStrix/DocFX_ForUnityProject.git",
 				"branch": "master",
-				"apiSpecFolder": "UnitySample/Documentation/api"
+				"apiSpecFolder": "UnitySample/Documentation/apiSpec"
 			},
 			
 			"newFileRepository": {
@@ -36,14 +36,12 @@
 		},
 		
 		"xref": [ "https://normanderwan.github.io/DocFxForUnity/Unity/xrefmap.yml" ],
-		"xrefservice": [
-			"https://xref.docs.microsoft.com/query?uid={uid}"
-		],
+		"xrefservice": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
 		
 		"sitemap": {
 			"baseUrl": "https://korstrix.github.io/docfxsample"
 		},
-		"overwrite": "UnitySample/Documentaiton/api/**.md",
+		"overwrite": "apiSpec/**.md",
 		
 		"content": [
 			{
@@ -51,13 +49,13 @@
 			},
 			{
                 "src": "api",
-                "files": [ "api/**.yml", "api/**.md" ],
-                "dest": "api"
+                "files": [ "**.yml", "**.md" ],
+				"dest": "api"
             },
             {
                 "src": "manual",
                 "files": [ "toc.yml", "**.md" ],
-                "dest": "manual"
+				"dest": "manual"
             }
 		],
 		
