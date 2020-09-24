@@ -77,8 +77,7 @@
 		
 		"template": [
 			"default",
-			"templates/unity",
-			"templates/disqus"
+			"templates/unity_discus"
 		],
 		
 		"dest": "_site",
