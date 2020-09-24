@@ -5,7 +5,7 @@
 				{
 					"src": "..",
 					"files": [
-						"**.csproj"
+						"*.csproj"
 					]
 				}
 			],
@@ -69,7 +69,8 @@
 		
 		"template": [
 			"default",
-			"templates/unity_disqus"
+			"templates/unity_disqus",
+			"templates/mermaid_diagram"
 		],
 		
 		"dest": "_site",
