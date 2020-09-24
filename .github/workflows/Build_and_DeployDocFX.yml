@@ -11,26 +11,25 @@ on:
 jobs: # 잡들 선언
 
   build: # build Job을 선언합니다.
-    runs-on: ubuntu-latest #실행 환경은 우분투의 마지막 버전으로 실행
+    runs-on: windows-latest # Required by DocFX #실행 환경은 DocFX가 윈도우를 필요로 해서 윈도우로
     
     steps: # 이 잡은 이 행동(action)들을 합니다.
     - name: Checkout # 일단 이 Repo를 Checkout을 합니다.
       uses: actions/checkout@v2
       with:
-        ref: xrefunity
+        ref: master
     
     
-    # Readme.md 파일을 document index로 옮깁니다. (index.md는 자동생성이 안됨)
-    - name: Replace Readme
+    - name: Install DocFX
+      run: choco install -y docfx
+
+    
+    # Readme.md 파일을 document index로 옮긴 뒤 빌드를 시작합니다.
+    - name: Build DocFX
       run: |
         cp README.md UnitySample/Documentation/index.md 
+        docfx UnitySample/Documentation/docfx.json 
        
-       
-    # 링크 : https://github.com/nikeee/docfx-action
-    - name: Build Documentation # 그다음 바로 DocFx를 빌드합니다.
-      uses: nikeee/docfx-action@v1.0.0  
-      with:
-        args: UnitySample/Documentation/docfx.json # 이 Repo의 해당 docFx가 있어서 인자로 넘깁니다.
    
    
     # Upload the generated documentation
