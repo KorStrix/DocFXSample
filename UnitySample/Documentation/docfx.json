@@ -50,14 +50,8 @@
                 "files": [ "toc.yml", "index.md" ]
             },
 			{
-				"files": [
-					"api/**.yml",
-					"api/index.md"
-				]
-			},
-			{
                 "src": "api",
-                "files": [ "**.yml", "**.md" ],
+                "files": [ "api/**.yml", "api/**.md" ],
                 "dest": "api"
             },
             {
@@ -77,7 +71,7 @@
 		
 		"template": [
 			"default",
-			"templates/unity_discus"
+			"templates/unity_disqus"
 		],
 		
 		"dest": "_site",
