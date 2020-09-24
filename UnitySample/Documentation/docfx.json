@@ -50,9 +50,13 @@
                 "files": [ "toc.yml", "index.md" ]
             },
 			{
+				"files": [ "api/index.md" ]
+			},
+			{
                 "src": "api",
                 "files": [ "api/**.yml", "api/**.md" ],
-                "dest": "api"
+                "dest": "api",
+			    "exclude": [ "api/index.md" ]
             },
             {
                 "src": "manual",
