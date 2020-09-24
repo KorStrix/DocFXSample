@@ -75,14 +75,16 @@
 			}
 		],
 		
+		"template": [
+			"default",
+			"templates/unity",
+			"templates/disqus"
+		],
 		
 		"dest": "_site",
 		"globalMetadataFiles": [],
 		"fileMetadataFiles": [],
-		"template": [
-			"default",
-			"templates/unity"
-		],
+
 		"postProcessors": [],
 		"markdownEngineName": "markdig",
 		"noLangKeyword": false,
