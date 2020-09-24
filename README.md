@@ -30,7 +30,10 @@ https://github.com/KorStrix/DocFX_ForUnityProject/blob/26907465c3022c191bedff3da
 
 여기에 DISQUS site를 연결해야 합니다.
 
+# Diagram
 
+Mermaid 다이어그램을 사용합니다.
+https://github.com/mermaid-js/mermaid
 
 ## 아직 못한 것
 
