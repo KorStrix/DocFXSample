@@ -53,7 +53,7 @@
                 "src": "api",
                 "files": [ "api/*.yml", "api/*.md" ],
                 "dest": "api",
-			    "exclude": [ "api/index.md" ]
+			    "exclude": [ "api/index.md", "api/toc.yml" ]
             },
             {
                 "src": "manual",
