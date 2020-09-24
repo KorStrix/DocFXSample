@@ -43,21 +43,20 @@
 		"sitemap": {
 			"baseUrl": "https://korstrix.github.io/docfxsample"
 		},
-		"overwrite": "UnitySample/Documentaiton/api/*.md",
+		"overwrite": "UnitySample/Documentaiton/api/**.md",
 		
 		"content": [
 			{
-				"files": [ "toc.yml", "index.md", "api/index.md", "api/toc.yml" ]
+				"files": [ "toc.yml", "index.md" ]
 			},
 			{
                 "src": "api",
-                "files": [ "api/*.yml", "api/*.md" ],
-                "dest": "api",
-			    "exclude": [ "api/index.md", "api/toc.yml" ]
+                "files": [ "api/**.yml", "api/**.md" ],
+                "dest": "api"
             },
             {
                 "src": "manual",
-                "files": [ "toc.yml", "*.md" ],
+                "files": [ "toc.yml", "**.md" ],
                 "dest": "manual"
             }
 		],
