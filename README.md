@@ -9,9 +9,9 @@ https://github.com/NormandErwan/DocFxForUnity
 
 ## GitHub Action
 
-이 프로젝트의 액션 워크플로 코드 [링크](https://github.com/KorStrix/DocFXSample/blob/master/.github/workflows/Build_and_Deploy_DocFX.yml)
+이 프로젝트의 액션 워크플로 코드 [링크](https://github.com/KorStrix/DocFX_ForUnityProject/blob/master/.github/workflows/Build_and_DeployDocFX.yml)
 
-이 프로젝트의 액션 결과 [링크](https://github.com/KorStrix/DocFXSample/actions)
+이 프로젝트의 액션 결과 [링크](https://github.com/KorStrix/DocFX_ForUnityProject/actions)
 
 ## 간단한 실행 방법
 
