@@ -1,11 +1,15 @@
 ![Build and Deploy](https://github.com/KorStrix/DocFX_ForUnityProject/workflows/Build%20and%20Deploy/badge.svg?branch=master)
 
-# DocFX_ForUnityProject
+# 개요
 
 이 프로젝트는 Unity Project를 GitHub Action(CI)를 통해 자동 생성하는 샘플 프로젝트입니다.
 
 https://github.com/NormandErwan/DocFxForUnity
 를 참고했습니다.
+
+### 이 프로젝트의 DocFX 결과 사이트
+https://korstrix.github.io/docfxsample/
+
 
 ## GitHub Action
 
@@ -42,6 +46,8 @@ https://github.com/mermaid-js/mermaid
 2. 옮긴 `Build_and_DeployDocFX.yml`을 수정합니다.
 
 3. 옮긴 깃허브 프로젝트 세팅에 `ACCESS_TOKEN` Secret을 저장합니다.
+
+4. 옮긴 깃허브 프로젝트의 gitignore에 *.csproj를 주석처리 합니다. (DocFX에서 필요합니다)
 
 4. `push`를 해봅니다.
 
