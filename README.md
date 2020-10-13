@@ -35,6 +35,16 @@ https://github.com/KorStrix/DocFX_ForUnityProject/blob/26907465c3022c191bedff3da
 Mermaid 다이어그램을 사용합니다.
 https://github.com/mermaid-js/mermaid
 
+## Unity Github Project에 DocFX 설치 방법
+
+1. `Documentation` 폴더 및 내용물과 , `.github/workflows/Build_and_DeployDocFX.yml` 파일을 깃허브 유니티 프로젝트에 옮깁니다.
+
+2. 옮긴 `Build_and_DeployDocFX.yml`을 수정합니다.
+
+3. 옮긴 깃허브 프로젝트 세팅에 `ACCESS_TOKEN` Secret을 저장합니다.
+
+4. `push`를 해봅니다.
+
 ## 아직 못한 것
 
 Unity Cs Reference - Xref 빌드 및 링크 연결
